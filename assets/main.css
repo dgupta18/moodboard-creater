@@ -1,0 +1,31 @@
+html {
+    font-family: whitney ssm a,whitney ssm b,lucida grande,lucida sans,Verdana,Helvetica,Arial,sans-serif;
+}
+
+header {
+    display: block;
+    text-align: center;
+    /* background-color: #DEF7FF; */
+    padding: 4px;
+}
+
+input.search {
+    color: #14AADE;
+    height: 16px;
+    border-color: #00719E;
+}
+
+h1 {
+    color: black;
+    size: 36px;
+}
+
+div.search {
+    background-color: #DEF7FF;
+    padding: 4px;
+}
+
+p {
+    color: black;
+    size: 16px;
+}

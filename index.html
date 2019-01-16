@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Website that takes in user input and displays a moodboard with the specified -->
+<!-- objects or colors. -->
+<!-- KEY: AIzaSyD7WBHu1qDq1WT7RqIejJa6dMJAQcJ7wJI -->
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Moodboard Generator</title>
+        <link rel="stylesheet" href="assets/main.css">
+    </head>
+    
+    <body>
+        <header>
+                <h1>Welcome to the Moodboard Generator!</h1>
+        </header>
+
+        <div class="search">
+            <p>Enter a word into the search term to start creating: 
+                <input class="search" type="text" name="search_str" value="">
+            </p>
+        </div>
+
+        <div class="output">
+            <div id="content"></div>
+            <script>
+                function hndlr(response) {
+                // for (var i = 0; i < response.items.length; i++) {
+                for (var i = 0; i < 5; i++) {
+                  var item = response.items[i];
+                  // in production code, item.htmlTitle should have the HTML entities escaped.
+                  document.getElementById("content").innerHTML += "<br>" + item.link;
+                }
+              }
+              </script>
+              <script src="https://www.googleapis.com/customsearch/v1?key=AIzaSyD7WBHu1qDq1WT7RqIejJa6dMJAQcJ7wJI&cx=003278454496141713355:wdvo7sz0b4a&q=hello&searchtype=image&callback=hndlr">
+              </script>
+        </div>
+        
+    </body>
+</html>
